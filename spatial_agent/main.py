@@ -180,8 +180,8 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default=os.getenv("MODEL_NAME", "claude-sonnet-4-5-20250929"),
-        help="Model name to use (env: MODEL_NAME, default: claude-sonnet-4-5-20250929)",
+        default=os.getenv("MODEL_NAME", "anthropic/claude-sonnet-4"),
+        help="Model name to use (env: MODEL_NAME, default: anthropic/claude-sonnet-4)",
     )
     parser.add_argument(
         "--config",
