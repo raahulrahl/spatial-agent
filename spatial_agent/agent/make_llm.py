@@ -9,7 +9,7 @@ from langchain_core.callbacks.streaming_stdout import StreamingStdOutCallbackHan
 
 # Default recommended models (2025)
 DEFAULT_OPENAI_MODEL = "gpt-5"
-DEFAULT_CLAUDE_MODEL = "claude-sonnet-4-5-20250929"
+DEFAULT_CLAUDE_MODEL = "claude-sonnet-4-20250514"
 DEFAULT_GEMINI_MODEL = "gemini-3-pro-preview"
 
 # Default stop sequences - prevent multiple action blocks and observation hallucination
@@ -400,7 +400,10 @@ def make_llm(
 
     # Unknown model
     openai_azure_models = list(AZURE_MODELS.keys())
-    claude_models = ["claude-sonnet-4-5-20250929", "claude-haiku-4-5-20251001", "claude-opus-4-5-20251101"]
+    claude_models = [
+        "claude-sonnet-4-20250514",
+        "claude-3-7-sonnet-20250219",
+    ]
     gemini_models = ["gemini-2.5-pro", "gemini-2.5-flash", "gemini-3-pro-preview", "gemini-3-flash-preview"]
     bedrock_models = [
         "us.anthropic.claude-sonnet-4-20250514-v1:0",
